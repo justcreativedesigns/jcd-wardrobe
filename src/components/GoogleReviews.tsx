@@ -1,10 +1,7 @@
-
 import React from 'react';
 import CTAButton from './CTAButton';
-
 const GoogleReviews = () => {
-  return (
-    <section className="py-16 px-6 bg-white">
+  return <section className="px-6 bg-white py-[28px]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-12">
           Google Reviews
@@ -16,8 +13,6 @@ const GoogleReviews = () => {
         
         <CTAButton />
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default GoogleReviews;
