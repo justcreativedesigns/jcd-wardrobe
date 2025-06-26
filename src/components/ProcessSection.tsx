@@ -10,8 +10,8 @@ const ProcessSection = () => {
   const steps = [
     {
       icon: Home,
-      title: "Tell Us Your Storage Needs",
-      description: "Book your free consultation and share your vision"
+      title: "Tell us about your dream home",
+      description: "Book your free consultation and share your vision with us"
     },
     {
       icon: PenTool,
@@ -21,17 +21,17 @@ const ProcessSection = () => {
     {
       icon: Hammer,
       title: "Let's start building",
-      description: "Our team gets to work, bringing your dream wardrobe to life."
+      description: "Our team gets to work, bringing your dream home to life"
     },
     {
       icon: CheckCircle,
       title: "Final installations",
-      description: "We take care of every detail to ensure perfection."
+      description: "We take care of every detail to ensure perfection"
     },
     {
       icon: Sparkles,
-      title: "Enjoy a Clutter-Free, Stylish Wardrobe!",
-      description: "Welcome to your beautifully designed wardrobe."
+      title: "Move In",
+      description: "Welcome to your beautifully designed home"
     }
   ];
 
