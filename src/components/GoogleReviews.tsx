@@ -10,7 +10,7 @@ const GoogleReviews = () => {
         </h2>
         
         <div className="flex justify-center">
-          <div className="elfsight-app-8d0d3b85-6833-47ee-a80a-b44fdf7f8063" data-elfsight-app-lazy></div>
+          <div className="elfsight-app-f238c939-f522-4fa5-ab66-3b052e5b46a7" data-elfsight-app-lazy></div>
         </div>
       </div>
     </section>
