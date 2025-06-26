@@ -1,9 +1,10 @@
+
 import React from 'react';
 const Footer = () => {
   return <footer className="text-white py-12 px-6 bg-zinc-50">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-          <div className="md:col-span-1">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+          <div className="col-span-2 md:col-span-1 flex justify-center md:justify-start">
             <div className="flex items-center space-x-2 mb-4">
               <img src="/lovable-uploads/c73dd433-5a99-425a-b09e-601397bfbf09.png" alt="Just Creative Designs" className="h-10 w-auto" />
             </div>
