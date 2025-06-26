@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-semibold text-lg mb-4">Contact</h4>
+            <h4 className="font-semibold text-lg mb-4 text-zinc-950">Contact</h4>
             <ul className="space-y-2 text-gray-400">
               <li><a href="mailto:info@justcreativedesigns.com" className="hover:text-white transition-colors">Email</a></li>
               <li><a href="tel:+918012345678" className="hover:text-white transition-colors">Call Us</a></li>
