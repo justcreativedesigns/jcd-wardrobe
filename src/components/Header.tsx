@@ -6,14 +6,12 @@ const Header = () => {
   return (
     <header className="w-full py-4 px-6 bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-red-600 flex items-center justify-center">
-            <span className="text-white font-bold text-sm">JCD</span>
-          </div>
-          <div>
-            <h1 className="font-semibold text-lg text-gray-900">Just</h1>
-            <p className="text-sm text-gray-600 -mt-1">Creative Designs</p>
-          </div>
+        <div className="flex items-center">
+          <img 
+            src="/lovable-uploads/c73dd433-5a99-425a-b09e-601397bfbf09.png" 
+            alt="Just Creative Designs" 
+            className="h-10 w-auto"
+          />
         </div>
         
         <div className="hidden sm:flex items-center space-x-4">
