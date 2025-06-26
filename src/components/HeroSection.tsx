@@ -12,7 +12,7 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-20 max-w-7xl mx-auto w-full flex-1 flex flex-col justify-center">
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-3 md:gap-6 lg:gap-12 items-center">
           {/* Left side - Text content */}
           <div className="order-1">
             <HeroContent />
