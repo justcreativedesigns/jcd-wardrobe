@@ -1,8 +1,12 @@
-import React from 'react';
+
+import React, { useState, useEffect, useRef } from 'react';
 import { Home, PenTool, Hammer, CheckCircle, Sparkles } from 'lucide-react';
 import CTAButton from './CTAButton';
 
 const ProcessSection = () => {
+  const [activeStep, setActiveStep] = useState(-1);
+  const sectionRef = useRef<HTMLElement>(null);
+
   const steps = [
     {
       icon: Home,
@@ -31,8 +35,41 @@ const ProcessSection = () => {
     }
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Start the animation sequence
+            setTimeout(() => setActiveStep(0), 1000); // First step after 1 second
+            setTimeout(() => setActiveStep(1), 2000); // Second step after 2 seconds
+            setTimeout(() => setActiveStep(2), 3000); // Third step after 3 seconds
+            setTimeout(() => setActiveStep(3), 4000); // Fourth step after 4 seconds
+            setTimeout(() => setActiveStep(4), 5000); // Fifth step after 5 seconds
+          } else {
+            // Reset animation when section is out of view
+            setActiveStep(-1);
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the section is visible
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section className="py-16 px-6 bg-gray-50">
+    <section ref={sectionRef} className="py-16 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 animate-fade-in">
@@ -45,6 +82,7 @@ const ProcessSection = () => {
           <div className="hidden lg:flex items-center justify-between">
             {steps.map((step, index) => {
               const Icon = step.icon;
+              const isActive = activeStep >= index;
               return (
                 <div key={index} className="flex items-center">
                   <div 
@@ -53,12 +91,12 @@ const ProcessSection = () => {
                   >
                     {/* Icon Circle */}
                     <div className={`w-20 h-20 rounded-full border-2 flex items-center justify-center mb-6 transition-all duration-500 hover:scale-110 ${
-                      index === steps.length - 1 
+                      isActive
                         ? 'bg-red-50 border-red-200' 
                         : 'bg-white border-gray-200'
                     }`}>
-                      <Icon className={`w-8 h-8 ${
-                        index === steps.length - 1 ? 'text-red-600' : 'text-gray-600'
+                      <Icon className={`w-8 h-8 transition-colors duration-500 ${
+                        isActive ? 'text-red-600' : 'text-gray-600'
                       }`} />
                     </div>
 
@@ -91,6 +129,7 @@ const ProcessSection = () => {
           <div className="lg:hidden space-y-8">
             {steps.map((step, index) => {
               const Icon = step.icon;
+              const isActive = activeStep >= index;
               return (
                 <div 
                   key={index} 
@@ -99,12 +138,12 @@ const ProcessSection = () => {
                 >
                   {/* Icon Circle */}
                   <div className={`w-16 h-16 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-all duration-500 hover:scale-110 ${
-                    index === steps.length - 1 
+                    isActive
                       ? 'bg-red-50 border-red-200' 
                       : 'bg-white border-gray-200'
                   }`}>
-                    <Icon className={`w-6 h-6 ${
-                      index === steps.length - 1 ? 'text-red-600' : 'text-gray-600'
+                    <Icon className={`w-6 h-6 transition-colors duration-500 ${
+                      isActive ? 'text-red-600' : 'text-gray-600'
                     }`} />
                   </div>
 
