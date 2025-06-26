@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
         </h2>
         
         <div className="relative">
-          <div className="flex animate-[marquee_10s_linear_infinite] md:animate-marquee whitespace-nowrap">
+          <div className="flex animate-[marquee_5s_linear_infinite] md:animate-marquee whitespace-nowrap">
             {[...features, ...features].map((feature, index) => (
               <div key={index} className="flex-none mx-8 text-center min-w-[200px]">
                 <div className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
