@@ -22,7 +22,7 @@ const InteriorSolutions = () => {
     title: 'Wallpaper',
     description: 'Transform your walls with stunning wallpaper designs'
   }];
-  return <section className="px-6 bg-gray-900 text-white py-[26px]">
+  return <section className="px-6 text-white py-[26px] bg-zinc-950">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
           End-to-End Interior Solutions for Every Space
