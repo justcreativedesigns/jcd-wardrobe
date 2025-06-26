@@ -1,5 +1,6 @@
 
 import React from 'react';
+import CTAButton from './CTAButton';
 
 const GoogleReviews = () => {
   return (
@@ -12,6 +13,8 @@ const GoogleReviews = () => {
         <div className="flex justify-center">
           <div className="elfsight-app-f238c939-f522-4fa5-ab66-3b052e5b46a7" data-elfsight-app-lazy></div>
         </div>
+        
+        <CTAButton />
       </div>
     </section>
   );

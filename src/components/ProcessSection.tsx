@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Home, PenTool, Hammer, CheckCircle, Sparkles } from 'lucide-react';
+import CTAButton from './CTAButton';
 
 const ProcessSection = () => {
   const steps = [
@@ -122,6 +122,8 @@ const ProcessSection = () => {
             })}
           </div>
         </div>
+        
+        <CTAButton />
       </div>
     </section>
   );

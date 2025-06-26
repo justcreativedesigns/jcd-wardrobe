@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -58,7 +57,7 @@ const ConsultationFormCard = () => {
 
   if (showThankYou) {
     return (
-      <Card className="border-green-200 shadow-lg animate-fade-in w-full max-w-md">
+      <Card className="border-green-200 shadow-lg animate-fade-in w-full max-w-md" data-consultation-form>
         <CardContent className="text-center p-8">
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -87,7 +86,7 @@ const ConsultationFormCard = () => {
   }
 
   return (
-    <Card className="shadow-xl border-0 animate-fade-in w-full max-w-md">
+    <Card className="shadow-xl border-0 animate-fade-in w-full max-w-md" data-consultation-form>
       <CardHeader className="text-center bg-gradient-to-r from-red-600 to-red-700 text-white rounded-t-lg">
         <CardTitle className="text-xl font-semibold">
           Get a Free Design Consultation

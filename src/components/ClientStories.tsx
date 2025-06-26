@@ -1,6 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import CTAButton from './CTAButton';
 
 const ClientStories = () => {
   const [currentStory, setCurrentStory] = useState(0);
@@ -154,6 +154,8 @@ const ClientStories = () => {
               />
             ))}
           </div>
+          
+          <CTAButton />
         </div>
       </section>
     </>

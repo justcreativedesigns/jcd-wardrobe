@@ -1,5 +1,6 @@
 
 import React from 'react';
+import CTAButton from './CTAButton';
 
 const WhyChooseUs = () => {
   const features = [
@@ -35,6 +36,8 @@ const WhyChooseUs = () => {
             ))}
           </div>
         </div>
+        
+        <CTAButton />
       </div>
     </section>
   );
