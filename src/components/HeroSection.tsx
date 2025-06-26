@@ -14,12 +14,12 @@ const HeroSection = () => {
       <div className="relative z-20 max-w-7xl mx-auto w-full flex-1 flex flex-col justify-center">
         <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
           {/* Left side - Text content */}
-          <div className="order-2 lg:order-1">
+          <div className="order-1">
             <HeroContent />
           </div>
 
           {/* Right side - Form */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+          <div className="order-2 flex justify-center lg:justify-end">
             <ConsultationFormCard />
           </div>
         </div>
