@@ -4,8 +4,8 @@ import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import WhyChooseUs from '../components/WhyChooseUs';
 import ClientStories from '../components/ClientStories';
-import GoogleReviews from '../components/GoogleReviews';
 import ProcessSection from '../components/ProcessSection';
+import GoogleReviews from '../components/GoogleReviews';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -15,8 +15,8 @@ const Index = () => {
       <HeroSection />
       <WhyChooseUs />
       <ClientStories />
-      <GoogleReviews />
       <ProcessSection />
+      <GoogleReviews />
       <Footer />
     </div>
   );
