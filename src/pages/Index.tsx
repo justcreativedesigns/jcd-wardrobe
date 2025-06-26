@@ -8,6 +8,7 @@ import ClientStories from '../components/ClientStories';
 import ProcessSection from '../components/ProcessSection';
 import GoogleReviews from '../components/GoogleReviews';
 import Footer from '../components/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <ProcessSection />
       <GoogleReviews />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
