@@ -92,6 +92,9 @@ const ConsultationFormCard = () => {
         <CardTitle className="text-xl font-semibold">
           Get a Free Design Consultation
         </CardTitle>
+        <p className="text-red-100 text-sm font-medium mt-2 animate-pulse">
+          ⚡ Last 3 spots left this month!
+        </p>
       </CardHeader>
       
       <CardContent className="p-6">
