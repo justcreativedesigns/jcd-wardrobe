@@ -11,28 +11,28 @@ const ClientStories = () => {
       id: 1,
       name: "Kritika & Shikhar",
       location: "Owner at SJR Bluewaters",
-      testimonial: "We got lucky when we found Truwv. The quality that we got after their handover is commendable.",
+      testimonial: "We got lucky when we found Creative Designs. The quality that we got after their handover is commendable.",
       image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=600&h=400&fit=crop"
     },
     {
       id: 2,
       name: "Priya & Rajesh",
       location: "Homeowners at Prestige Lakeside",
-      testimonial: "Truwv transformed our 3BHK into a dream home. Their attention to detail is exceptional.",
+      testimonial: "Creative Designs transformed our 3BHK into a dream home. Their attention to detail is exceptional.",
       image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop"
     },
     {
       id: 3,
       name: "Anita Sharma",
       location: "Villa Owner at Whitefield",
-      testimonial: "Professional service, on-time delivery, and beautiful designs. Highly recommend Truwv!",
+      testimonial: "Professional service, on-time delivery, and beautiful designs. Highly recommend Creative Designs!",
       image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&h=400&fit=crop"
     },
     {
       id: 4,
       name: "Vikram & Sunita",
       location: "Apartment at Brigade Gateway",
-      testimonial: "From modular kitchen to bedroom interiors, everything was perfectly executed by Truwv team.",
+      testimonial: "From modular kitchen to bedroom interiors, everything was perfectly executed by Creative Designs team.",
       image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=600&h=400&fit=crop"
     }
   ];
@@ -73,11 +73,11 @@ const ClientStories = () => {
             Bangalore Client Stories
           </h2>
           <p className="text-gray-600 mb-12">
-            Our clients share why they loved doing their home with Truwv
+            Our clients share why they loved doing their home with Creative Designs
           </p>
           
           <Card 
-            className="overflow-hidden shadow-xl border-0 max-w-2xl mx-auto relative"
+            className="overflow-hidden shadow-xl border-0 max-w-md mx-auto relative"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
@@ -107,7 +107,7 @@ const ClientStories = () => {
                 <img 
                   src={stories[currentStory].image}
                   alt={`${stories[currentStory].name} testimonial`}
-                  className="w-full h-64 object-cover transition-all duration-500"
+                  className="w-full aspect-square object-cover transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end">
                   <div className="text-white p-6 w-full">
