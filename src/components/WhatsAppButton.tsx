@@ -15,7 +15,7 @@ const WhatsAppButton = () => {
       <img 
         src="https://img.icons8.com/?size=100&id=16713&format=png&color=000000" 
         alt="WhatsApp" 
-        className="w-6 h-6 filter invert"
+        className="w-6 h-6"
       />
     </a>
   );
