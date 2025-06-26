@@ -47,109 +47,112 @@ const ClientStories = () => {
     }, STORY_DURATION);
 
     return () => clearInterval(timer);
-  }, [currentStory, isPaused, stories.length]);
+  }, [isPaused, stories.length]); // Removed currentStory from dependencies to fix the auto-advance issue
 
   const goToStory = (index: number) => {
     setCurrentStory(index);
   };
 
   return (
-    <section className="py-16 px-6 bg-gray-50">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-          Bangalore Client Stories
-        </h2>
-        <p className="text-gray-600 mb-12">
-          Our clients share why they loved doing their home with Truwv
-        </p>
-        
-        <Card 
-          className="overflow-hidden shadow-xl border-0 max-w-2xl mx-auto relative"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
-          {/* Progress bars */}
-          <div className="absolute top-0 left-0 right-0 z-10 flex gap-1 p-3">
-            {stories.map((_, index) => (
-              <div
-                key={index}
-                className="flex-1 h-1 bg-black bg-opacity-20 rounded-full overflow-hidden cursor-pointer"
-                onClick={() => goToStory(index)}
-              >
+    <>
+      <style>
+        {`
+          @keyframes progress {
+            from { width: 0%; }
+            to { width: 100%; }
+          }
+        `}
+      </style>
+      <section className="py-16 px-6 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            Bangalore Client Stories
+          </h2>
+          <p className="text-gray-600 mb-12">
+            Our clients share why they loved doing their home with Truwv
+          </p>
+          
+          <Card 
+            className="overflow-hidden shadow-xl border-0 max-w-2xl mx-auto relative"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            {/* Progress bars */}
+            <div className="absolute top-0 left-0 right-0 z-10 flex gap-1 p-3">
+              {stories.map((_, index) => (
                 <div
-                  className={`h-full bg-white transition-all duration-300 ${
-                    index < currentStory 
-                      ? 'w-full' 
-                      : index === currentStory 
-                        ? 'w-full animate-[progress_4s_linear_infinite]' 
-                        : 'w-0'
-                  }`}
-                />
-              </div>
-            ))}
-          </div>
+                  key={index}
+                  className="flex-1 h-1 bg-black bg-opacity-20 rounded-full overflow-hidden cursor-pointer"
+                  onClick={() => goToStory(index)}
+                >
+                  <div
+                    className={`h-full bg-white transition-all duration-300 ${
+                      index < currentStory 
+                        ? 'w-full' 
+                        : index === currentStory 
+                          ? 'w-full animate-[progress_4s_linear_infinite]' 
+                          : 'w-0'
+                    }`}
+                  />
+                </div>
+              ))}
+            </div>
 
-          <CardContent className="p-0">
-            <div className="relative">
-              <img 
-                src={stories[currentStory].image}
-                alt={`${stories[currentStory].name} testimonial`}
-                className="w-full h-64 object-cover transition-all duration-500"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end">
-                <div className="text-white p-6 w-full">
-                  <h3 className="text-xl font-semibold mb-1">
-                    {stories[currentStory].name}
-                  </h3>
-                  <p className="text-sm text-gray-200 mb-3">
-                    {stories[currentStory].location}
-                  </p>
-                  <p className="text-white italic text-sm">
-                    "{stories[currentStory].testimonial}"
-                  </p>
+            <CardContent className="p-0">
+              <div className="relative">
+                <img 
+                  src={stories[currentStory].image}
+                  alt={`${stories[currentStory].name} testimonial`}
+                  className="w-full h-64 object-cover transition-all duration-500"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end">
+                  <div className="text-white p-6 w-full">
+                    <h3 className="text-xl font-semibold mb-1">
+                      {stories[currentStory].name}
+                    </h3>
+                    <p className="text-sm text-gray-200 mb-3">
+                      {stories[currentStory].location}
+                    </p>
+                    <p className="text-white italic text-sm">
+                      "{stories[currentStory].testimonial}"
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </CardContent>
+            </CardContent>
 
-          {/* Navigation arrows */}
-          <button
-            onClick={() => goToStory((currentStory - 1 + stories.length) % stories.length)}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-black bg-opacity-50 text-white rounded-full flex items-center justify-center hover:bg-opacity-70 transition-all z-10"
-          >
-            ‹
-          </button>
-          <button
-            onClick={() => goToStory((currentStory + 1) % stories.length)}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-black bg-opacity-50 text-white rounded-full flex items-center justify-center hover:bg-opacity-70 transition-all z-10"
-          >
-            ›
-          </button>
-        </Card>
-
-        {/* Story indicators */}
-        <div className="flex justify-center mt-6 gap-2">
-          {stories.map((_, index) => (
+            {/* Navigation arrows */}
             <button
-              key={index}
-              onClick={() => goToStory(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                index === currentStory 
-                  ? 'bg-red-600' 
-                  : 'bg-gray-300 hover:bg-gray-400'
-              }`}
-            />
-          ))}
-        </div>
-      </div>
+              onClick={() => goToStory((currentStory - 1 + stories.length) % stories.length)}
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-black bg-opacity-50 text-white rounded-full flex items-center justify-center hover:bg-opacity-70 transition-all z-10"
+            >
+              ‹
+            </button>
+            <button
+              onClick={() => goToStory((currentStory + 1) % stories.length)}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-black bg-opacity-50 text-white rounded-full flex items-center justify-center hover:bg-opacity-70 transition-all z-10"
+            >
+              ›
+            </button>
+          </Card>
 
-      <style jsx>{`
-        @keyframes progress {
-          from { width: 0%; }
-          to { width: 100%; }
-        }
-      `}</style>
-    </section>
+          {/* Story indicators */}
+          <div className="flex justify-center mt-6 gap-2">
+            {stories.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToStory(index)}
+                className={`w-3 h-3 rounded-full transition-all ${
+                  index === currentStory 
+                    ? 'bg-red-600' 
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
