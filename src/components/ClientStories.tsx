@@ -47,7 +47,7 @@ const ClientStories = () => {
     }, STORY_DURATION);
 
     return () => clearInterval(timer);
-  }, [isPaused, stories.length]); // Removed currentStory from dependencies to fix the auto-advance issue
+  }, [isPaused, stories.length]);
 
   const goToStory = (index: number) => {
     setCurrentStory(index);
@@ -60,6 +60,10 @@ const ClientStories = () => {
           @keyframes progress {
             from { width: 0%; }
             to { width: 100%; }
+          }
+          
+          .progress-active {
+            animation: progress 4s linear forwards;
           }
         `}
       </style>
@@ -90,7 +94,7 @@ const ClientStories = () => {
                       index < currentStory 
                         ? 'w-full' 
                         : index === currentStory 
-                          ? 'w-full animate-[progress_4s_linear_infinite]' 
+                          ? 'progress-active' 
                           : 'w-0'
                     }`}
                   />
