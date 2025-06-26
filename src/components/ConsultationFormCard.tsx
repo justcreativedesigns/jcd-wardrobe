@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -57,15 +58,15 @@ const ConsultationFormCard = () => {
 
   if (showThankYou) {
     return (
-      <Card className="border-green-200 shadow-lg animate-fade-in w-full max-w-md" data-consultation-form>
-        <CardContent className="text-center p-8">
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <Card className="border-green-200 shadow-lg animate-fade-in w-full max-w-sm md:max-w-md mx-auto" data-consultation-form>
+        <CardContent className="text-center p-6 md:p-8">
+          <div className="w-12 h-12 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg className="w-6 h-6 md:w-8 md:h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
-          <p className="text-gray-600 mb-6">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
+          <p className="text-gray-600 mb-6 text-sm md:text-base">
             Thank you for your interest! Our team will reach out to you soon.
           </p>
           <Button 
@@ -76,7 +77,7 @@ const ConsultationFormCard = () => {
               setFormData({ name: '', email: '', phone: '' });
             }}
             variant="outline"
-            className="w-full"
+            className="w-full h-10 md:h-12"
           >
             Book Another Consultation
           </Button>
@@ -86,26 +87,26 @@ const ConsultationFormCard = () => {
   }
 
   return (
-    <Card className="shadow-xl border-0 animate-fade-in w-full max-w-md" data-consultation-form>
-      <CardHeader className="text-center bg-gradient-to-r from-red-600 to-red-700 text-white rounded-t-lg">
-        <CardTitle className="text-xl font-semibold">
+    <Card className="shadow-xl border-0 animate-fade-in w-full max-w-sm md:max-w-md mx-auto" data-consultation-form>
+      <CardHeader className="text-center bg-gradient-to-r from-red-600 to-red-700 text-white rounded-t-lg p-4 md:p-6">
+        <CardTitle className="text-lg md:text-xl font-semibold">
           Get a Free Design Consultation
         </CardTitle>
-        <p className="text-red-100 text-sm font-medium mt-2 animate-pulse">
+        <p className="text-red-100 text-xs md:text-sm font-medium mt-2 animate-pulse">
           ⚡ Last 3 spots left this month!
         </p>
       </CardHeader>
       
-      <CardContent className="p-6">
+      <CardContent className="p-4 md:p-6">
         {step === 1 && (
           <div className="animate-slide-in-right">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Property type</h3>
-            <div className="grid grid-cols-2 gap-3 mb-6">
+            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4">Property type</h3>
+            <div className="grid grid-cols-2 gap-2 md:gap-3 mb-4 md:mb-6">
               {propertyTypes.map((type) => (
                 <Button
                   key={type}
                   variant={selectedPropertyType === type ? "default" : "outline"}
-                  className={`h-12 font-medium transition-all duration-200 ${
+                  className={`h-10 md:h-12 text-sm md:text-base font-medium transition-all duration-200 ${
                     selectedPropertyType === type 
                       ? 'bg-red-600 hover:bg-red-700 text-white' 
                       : 'hover:border-red-300 hover:text-red-600'
@@ -118,7 +119,7 @@ const ConsultationFormCard = () => {
             </div>
             <Button 
               onClick={handleNext}
-              className="w-full h-12 bg-gray-900 hover:bg-gray-800 font-medium"
+              className="w-full h-10 md:h-12 bg-gray-900 hover:bg-gray-800 font-medium text-sm md:text-base"
             >
               Next
             </Button>
@@ -126,8 +127,8 @@ const ConsultationFormCard = () => {
         )}
 
         {step === 2 && (
-          <form onSubmit={handleSubmit} className="space-y-4 animate-slide-in-right">
-            <div className="text-sm text-gray-600 mb-4">
+          <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4 animate-slide-in-right">
+            <div className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">
               Property Type: <span className="font-semibold text-red-600">{selectedPropertyType}</span>
             </div>
             
@@ -137,7 +138,7 @@ const ConsultationFormCard = () => {
                 placeholder="Your Name"
                 value={formData.name}
                 onChange={(e) => handleInputChange('name', e.target.value)}
-                className="h-12"
+                className="h-10 md:h-12 text-sm md:text-base"
                 required
               />
             </div>
@@ -148,7 +149,7 @@ const ConsultationFormCard = () => {
                 placeholder="Email Address"
                 value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
-                className="h-12"
+                className="h-10 md:h-12 text-sm md:text-base"
                 required
               />
             </div>
@@ -159,25 +160,25 @@ const ConsultationFormCard = () => {
                 placeholder="Phone Number"
                 value={formData.phone}
                 onChange={(e) => handleInputChange('phone', e.target.value)}
-                className="h-12"
+                className="h-10 md:h-12 text-sm md:text-base"
                 required
               />
             </div>
             
-            <div className="flex gap-3 pt-2">
+            <div className="flex gap-2 md:gap-3 pt-2">
               <Button 
                 type="button"
                 variant="outline"
                 onClick={() => setStep(1)}
-                className="flex-1 h-12"
+                className="flex-1 h-10 md:h-12 text-sm md:text-base"
               >
                 Back
               </Button>
               <Button 
                 type="submit"
-                className="flex-1 h-12 bg-red-600 hover:bg-red-700 font-medium"
+                className="flex-1 h-10 md:h-12 bg-red-600 hover:bg-red-700 font-medium text-sm md:text-base"
               >
-                Book Your Free Consultation
+                Book Free Consultation
               </Button>
             </div>
           </form>
