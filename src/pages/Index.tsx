@@ -5,6 +5,7 @@ import HeroSection from '../components/HeroSection';
 import WhyChooseUs from '../components/WhyChooseUs';
 import ClientStories from '../components/ClientStories';
 import GoogleReviews from '../components/GoogleReviews';
+import ProcessSection from '../components/ProcessSection';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <WhyChooseUs />
       <ClientStories />
       <GoogleReviews />
+      <ProcessSection />
       <Footer />
     </div>
   );
