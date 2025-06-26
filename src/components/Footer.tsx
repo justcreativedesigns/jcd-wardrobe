@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Footer = () => {
@@ -8,13 +7,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div className="md:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-red-600 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">JCD</span>
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg">Just</h3>
-                <p className="text-sm text-gray-400 -mt-1">Creative Designs</p>
-              </div>
+              <img 
+                src="/lovable-uploads/c73dd433-5a99-425a-b09e-601397bfbf09.png" 
+                alt="Just Creative Designs" 
+                className="h-10 w-auto"
+              />
             </div>
           </div>
           
