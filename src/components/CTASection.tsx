@@ -4,7 +4,7 @@ import ConsultationFormCard from './ConsultationFormCard';
 
 const CTASection = () => {
   return (
-    <section className="py-16 lg:py-24 px-4 md:px-6 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-16 lg:py-24 px-4 md:px-6 bg-gradient-to-br from-red-50 via-gray-50 to-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Text content */}
