@@ -1,73 +1,83 @@
-# Welcome to your Lovable project
+# Just Creative Designs - Interior Design Website
 
-## Project info
+A high-performance landing page for Just Creative Designs, optimized for Google Ads campaigns.
 
-**URL**: https://lovable.dev/projects/8f8d24b4-8689-42bb-8e57-eec5af6cc5f0
+## 🚀 Performance Optimizations
 
-## How can I edit this code?
+- **Lazy Loading**: Images and components load on-demand
+- **Code Splitting**: Routes are loaded dynamically
+- **Minimal Dependencies**: Removed 40+ unused UI components and packages
+- **Optimized Build**: Terser minification with console removal
+- **Asset Optimization**: Preconnect and preload for external resources
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+- **React 18** with TypeScript
+- **Vite** for fast builds and HMR
+- **Tailwind CSS** for styling
+- **React Router** for navigation
+- **Minimal UI Components** (only essential ones)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8f8d24b4-8689-42bb-8e57-eec5af6cc5f0) and start prompting.
+## 📦 Installation
 
-Changes made via Lovable will be committed automatically to this repo.
+```bash
+# Clone the repository
+git clone https://github.com/gangadhar02/jcd-blr.git
 
-**Use your preferred IDE**
+# Navigate to project directory
+cd jcd-blr
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+# Install dependencies
+npm install
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 🏗️ Build
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# Production build
+npm run build
 
-**Use GitHub Codespaces**
+# Preview production build
+npm run preview
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📁 Project Structure
 
-## What technologies are used for this project?
+```
+src/
+├── components/
+│   ├── ui/          # Minimal UI components (button, card, input, etc.)
+│   ├── LazyImage.tsx # Optimized image loading
+│   └── ...          # Business components
+├── pages/
+│   ├── Index.tsx    # Main landing page
+│   └── NotFound.tsx # 404 page
+└── App.tsx          # Main app with lazy routing
+```
 
-This project is built with:
+## ⚡ Performance Features
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. **Image Optimization**
+   - Lazy loading with intersection observer
+   - Preloading for next carousel images
 
-## How can I deploy this project?
+2. **Bundle Optimization**
+   - Vendor chunk splitting
+   - Tree shaking enabled
+   - Removed unused dependencies
 
-Simply open [Lovable](https://lovable.dev/projects/8f8d24b4-8689-42bb-8e57-eec5af6cc5f0) and click on Share -> Publish.
+3. **Network Optimization**
+   - Preconnect to Google Fonts
+   - DNS prefetch for third-party scripts
+   - Font preloading
 
-## Can I connect a custom domain to my Lovable project?
+## 🎯 Deployment
 
-Yes, you can!
+Optimized for static hosting. The build output in `dist/` can be deployed to any static hosting service.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📝 License
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Private repository for Just Creative Designs.

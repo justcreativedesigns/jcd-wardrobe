@@ -1,8 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
+import { LazyImage } from './LazyImage';
 
 const BackgroundCarousel = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState<boolean[]>([]);
 
   const backgroundImages = [
     '/lovable-uploads/bc205c6a-93c7-4f1e-bad2-5f22f3ccc6d8.png',
@@ -12,7 +14,10 @@ const BackgroundCarousel = () => {
     '/lovable-uploads/36ee9d46-07ee-434f-9f89-c51e9c48cdd6.png'
   ];
 
-  // Auto-advance background carousel every 5 seconds
+  useEffect(() => {
+    setImagesLoaded(new Array(backgroundImages.length).fill(false));
+  }, []);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % backgroundImages.length);
@@ -20,6 +25,19 @@ const BackgroundCarousel = () => {
 
     return () => clearInterval(timer);
   }, [backgroundImages.length]);
+
+  useEffect(() => {
+    const nextIndex = (currentImageIndex + 1) % backgroundImages.length;
+    const img = new Image();
+    img.src = backgroundImages[nextIndex];
+    img.onload = () => {
+      setImagesLoaded(prev => {
+        const newLoaded = [...prev];
+        newLoaded[nextIndex] = true;
+        return newLoaded;
+      });
+    };
+  }, [currentImageIndex]);
 
   return (
     <div className="absolute inset-0 z-0">
@@ -30,14 +48,14 @@ const BackgroundCarousel = () => {
             index === currentImageIndex ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <img
+          <LazyImage
             src={image}
             alt={`Interior design ${index + 1}`}
             className="w-full h-full object-cover"
+            loading={index === 0 ? 'eager' : 'lazy'}
           />
         </div>
       ))}
-      {/* Transparent black overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
     </div>
   );
