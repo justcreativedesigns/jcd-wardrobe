@@ -4,44 +4,34 @@ import React from 'react';
 const QualityMaterials = () => {
   const brandLogos = [
     {
-      name: 'Godrej',
-      url: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=200&h=100&fit=crop&crop=center',
-      alt: 'Godrej Logo'
+      name: 'Merino',
+      url: 'https://cdn.truww.com/merino_icon_transparent.png',
+      alt: 'Merino Logo'
     },
     {
-      name: 'Asian Paints',
-      url: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=200&h=100&fit=crop&crop=center',
-      alt: 'Asian Paints Logo'
+      name: 'Greenply',
+      url: 'https://cdn.truww.com/greenply_icon_transparent.png',
+      alt: 'Greenply Logo'
     },
     {
-      name: 'Kohler',
-      url: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=200&h=100&fit=crop&crop=center',
-      alt: 'Kohler Logo'
+      name: 'Saint Gobain',
+      url: 'https://cdn.truww.com/saint_gobain_icon_transparent.png',
+      alt: 'Saint Gobain Logo'
     },
     {
-      name: 'Hafele',
-      url: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=200&h=100&fit=crop&crop=center',
-      alt: 'Hafele Logo'
+      name: 'Hettich',
+      url: 'https://cdn.truww.com/hettich_icon_transparent.png',
+      alt: 'Hettich Logo'
     },
     {
-      name: 'Sleepwell',
-      url: 'https://images.unsplash.com/photo-1586227740560-8cf2732c1531?w=200&h=100&fit=crop&crop=center',
-      alt: 'Sleepwell Logo'
+      name: 'Franke',
+      url: 'https://cdn.truww.com/franke_icon_transparent.png',
+      alt: 'Franke Logo'
     },
     {
-      name: 'Century Ply',
-      url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=100&fit=crop&crop=center',
-      alt: 'Century Ply Logo'
-    },
-    {
-      name: 'Wipro',
-      url: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop&crop=center',
-      alt: 'Wipro Logo'
-    },
-    {
-      name: 'Hindware',
-      url: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=200&h=100&fit=crop&crop=center',
-      alt: 'Hindware Logo'
+      name: 'Century Plyboards',
+      url: 'https://upload.wikimedia.org/wikipedia/en/0/06/Century_Plyboards.svg',
+      alt: 'Century Plyboards Logo'
     }
   ];
 
