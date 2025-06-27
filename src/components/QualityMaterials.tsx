@@ -48,49 +48,13 @@ const QualityMaterials = () => {
           </p>
         </div>
 
-        {/* Marquee Container */}
+        {/* Single Marquee Container */}
         <div className="relative">
-          {/* First Row - Left to Right */}
-          <div className="flex overflow-hidden mb-8">
-            <div className="flex animate-marquee">
-              {brandLogos.map((brand, index) => (
-                <div
-                  key={`first-${index}`}
-                  className="flex-shrink-0 mx-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 w-48 h-24 flex items-center justify-center"
-                >
-                  <img
-                    src={brand.url}
-                    alt={brand.alt}
-                    className="max-w-full max-h-full object-contain transition-all duration-300"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
-            {/* Duplicate for seamless loop */}
-            <div className="flex animate-marquee">
-              {brandLogos.map((brand, index) => (
-                <div
-                  key={`first-duplicate-${index}`}
-                  className="flex-shrink-0 mx-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 w-48 h-24 flex items-center justify-center"
-                >
-                  <img
-                    src={brand.url}
-                    alt={brand.alt}
-                    className="max-w-full max-h-full object-contain transition-all duration-300"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Second Row - Right to Left (Reverse) */}
           <div className="flex overflow-hidden">
-            <div className="flex animate-marquee" style={{ animationDirection: 'reverse' }}>
-              {brandLogos.slice().reverse().map((brand, index) => (
+            <div className="flex animate-marquee">
+              {brandLogos.map((brand, index) => (
                 <div
-                  key={`second-${index}`}
+                  key={`brand-${index}`}
                   className="flex-shrink-0 mx-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 w-48 h-24 flex items-center justify-center"
                 >
                   <img
@@ -103,10 +67,10 @@ const QualityMaterials = () => {
               ))}
             </div>
             {/* Duplicate for seamless loop */}
-            <div className="flex animate-marquee" style={{ animationDirection: 'reverse' }}>
-              {brandLogos.slice().reverse().map((brand, index) => (
+            <div className="flex animate-marquee">
+              {brandLogos.map((brand, index) => (
                 <div
-                  key={`second-duplicate-${index}`}
+                  key={`brand-duplicate-${index}`}
                   className="flex-shrink-0 mx-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 w-48 h-24 flex items-center justify-center"
                 >
                   <img
