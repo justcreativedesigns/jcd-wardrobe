@@ -20,7 +20,7 @@ const WhyChooseUs = () => {
     title: '10 Yrs Warranty'
   }, {
     icon: '⏱️',
-    title: '35-Day Delivery, or ₹2k/day'
+    title: '45-Day Delivery, or ₹2k/day'
   }];
 
   return (
