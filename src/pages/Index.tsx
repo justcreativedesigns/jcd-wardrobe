@@ -7,6 +7,7 @@ import WhyChooseUs from '../components/WhyChooseUs';
 import ClientStories from '../components/ClientStories';
 import ProcessSection from '../components/ProcessSection';
 import GoogleReviews from '../components/GoogleReviews';
+import QualityMaterials from '../components/QualityMaterials';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 
@@ -20,6 +21,7 @@ const Index = () => {
       <ClientStories />
       <ProcessSection />
       <GoogleReviews />
+      <QualityMaterials />
       <Footer />
       <WhatsAppButton />
     </div>
