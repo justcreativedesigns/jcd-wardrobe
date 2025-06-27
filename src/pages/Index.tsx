@@ -8,6 +8,7 @@ import ClientStories from '../components/ClientStories';
 import ProcessSection from '../components/ProcessSection';
 import GoogleReviews from '../components/GoogleReviews';
 import QualityMaterials from '../components/QualityMaterials';
+import CTASection from '../components/CTASection';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 
@@ -22,6 +23,7 @@ const Index = () => {
       <ProcessSection />
       <GoogleReviews />
       <QualityMaterials />
+      <CTASection />
       <Footer />
       <WhatsAppButton />
     </div>
