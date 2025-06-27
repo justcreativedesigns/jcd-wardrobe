@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           <div className="col-span-2 md:col-span-1 flex justify-center md:justify-start">
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/lovable-uploads/c73dd433-5a99-425a-b09e-601397bfbf09.png" alt="Just Creative Designs" className="h-10 w-auto" />
+              <img src="/lovable-uploads/c73dd433-5a99-425a-b09e-601397bfbf09.webp" alt="Just Creative Designs" className="h-10 w-auto" />
             </div>
           </div>
           

@@ -7,11 +7,11 @@ const BackgroundCarousel = () => {
   const [imagesLoaded, setImagesLoaded] = useState<boolean[]>([]);
 
   const backgroundImages = [
-    '/lovable-uploads/bc205c6a-93c7-4f1e-bad2-5f22f3ccc6d8.png',
-    '/lovable-uploads/d11344c6-baec-4f37-a670-7552a6c6bbc5.png',
-    '/lovable-uploads/d0be9860-953b-49bf-9312-f0b10d4baa9d.png',
-    '/lovable-uploads/9a4e98c1-26f2-4b17-8752-e090f6713c30.png',
-    '/lovable-uploads/36ee9d46-07ee-434f-9f89-c51e9c48cdd6.png'
+    '/lovable-uploads/bc205c6a-93c7-4f1e-bad2-5f22f3ccc6d8.webp',
+    '/lovable-uploads/d11344c6-baec-4f37-a670-7552a6c6bbc5.webp',
+    '/lovable-uploads/d0be9860-953b-49bf-9312-f0b10d4baa9d.webp',
+    '/lovable-uploads/9a4e98c1-26f2-4b17-8752-e090f6713c30.webp',
+    '/lovable-uploads/36ee9d46-07ee-434f-9f89-c51e9c48cdd6.webp'
   ];
 
   useEffect(() => {
