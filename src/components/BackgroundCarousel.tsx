@@ -5,11 +5,11 @@ const BackgroundCarousel = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const backgroundImages = [
-    'https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=1920&h=1080&fit=crop',
-    'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920&h=1080&fit=crop',
-    'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920&h=1080&fit=crop',
-    'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=1920&h=1080&fit=crop',
-    'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1920&h=1080&fit=crop'
+    '/lovable-uploads/73641863-3569-4d16-b855-9099c7bae216.png',
+    '/lovable-uploads/324ac00f-fc6e-4bd4-b861-950a793ddede.png',
+    '/lovable-uploads/21de5a35-2d51-4f1e-be8e-320e3a3d3dd3.png',
+    '/lovable-uploads/7cea7343-250c-4995-94ab-bcdcddb6cf11.png',
+    '/lovable-uploads/4ae86f2e-98be-4379-8f9d-dfc6d1c18e80.png'
   ];
 
   // Auto-advance background carousel every 5 seconds
