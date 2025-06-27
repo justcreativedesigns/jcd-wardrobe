@@ -15,8 +15,8 @@ const Header = () => {
         </div>
         
         <div className="hidden sm:flex items-center space-x-4">
-          <Button variant="outline" className="font-medium">
-            Contact Now
+          <Button variant="outline" className="font-medium" asChild>
+            <a href="tel:+918884456466">Contact Now</a>
           </Button>
           <Button className="bg-red-600 hover:bg-red-700 font-medium">
             Book Free Consultation
