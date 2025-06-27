@@ -14,6 +14,7 @@ const ConsultationFormCard = () => {
     phone: ''
   });
   const [showThankYou, setShowThankYou] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const propertyTypes = ['1 BHK', '2 BHK', '3 BHK', '4 BHK', 'Villa', 'Duplex'];
@@ -33,8 +34,9 @@ const ConsultationFormCard = () => {
     setStep(2);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
     if (!formData.name || !formData.email || !formData.phone) {
       toast({
         title: "Please fill in all fields",
@@ -42,14 +44,46 @@ const ConsultationFormCard = () => {
       });
       return;
     }
-    
-    console.log('Form submitted:', { ...formData, propertyType: selectedPropertyType });
-    setShowThankYou(true);
-    
-    toast({
-      title: "Consultation booked successfully!",
-      description: "Our team will reach out to you soon."
-    });
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://submit-form.com/znE5oNIKd', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          propertyType: selectedPropertyType,
+          source: 'Website Consultation Form'
+        })
+      });
+
+      if (response.ok) {
+        console.log('Form submitted successfully:', { ...formData, propertyType: selectedPropertyType });
+        setShowThankYou(true);
+        
+        toast({
+          title: "Consultation booked successfully!",
+          description: "Our team will reach out to you soon."
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Submission failed",
+        description: "Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -139,6 +173,7 @@ const ConsultationFormCard = () => {
                 value={formData.name}
                 onChange={(e) => handleInputChange('name', e.target.value)}
                 className="h-10 md:h-12 text-sm md:text-base"
+                disabled={isSubmitting}
                 required
               />
             </div>
@@ -150,6 +185,7 @@ const ConsultationFormCard = () => {
                 value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
                 className="h-10 md:h-12 text-sm md:text-base"
+                disabled={isSubmitting}
                 required
               />
             </div>
@@ -161,6 +197,7 @@ const ConsultationFormCard = () => {
                 value={formData.phone}
                 onChange={(e) => handleInputChange('phone', e.target.value)}
                 className="h-10 md:h-12 text-sm md:text-base"
+                disabled={isSubmitting}
                 required
               />
             </div>
@@ -170,15 +207,17 @@ const ConsultationFormCard = () => {
                 type="button"
                 variant="outline"
                 onClick={() => setStep(1)}
+                disabled={isSubmitting}
                 className="flex-1 h-10 md:h-12 text-sm md:text-base"
               >
                 Back
               </Button>
               <Button 
                 type="submit"
+                disabled={isSubmitting}
                 className="flex-1 h-10 md:h-12 bg-red-600 hover:bg-red-700 font-medium text-sm md:text-base"
               >
-                Book Free Consultation
+                {isSubmitting ? 'Submitting...' : 'Book Free Consultation'}
               </Button>
             </div>
           </form>
