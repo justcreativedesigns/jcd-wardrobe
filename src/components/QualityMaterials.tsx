@@ -61,7 +61,7 @@ const QualityMaterials = () => {
                   <img
                     src={brand.url}
                     alt={brand.alt}
-                    className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    className="max-w-full max-h-full object-contain transition-all duration-300"
                     loading="lazy"
                   />
                 </div>
@@ -77,7 +77,7 @@ const QualityMaterials = () => {
                   <img
                     src={brand.url}
                     alt={brand.alt}
-                    className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    className="max-w-full max-h-full object-contain transition-all duration-300"
                     loading="lazy"
                   />
                 </div>
@@ -96,7 +96,7 @@ const QualityMaterials = () => {
                   <img
                     src={brand.url}
                     alt={brand.alt}
-                    className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    className="max-w-full max-h-full object-contain transition-all duration-300"
                     loading="lazy"
                   />
                 </div>
@@ -112,7 +112,7 @@ const QualityMaterials = () => {
                   <img
                     src={brand.url}
                     alt={brand.alt}
-                    className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    className="max-w-full max-h-full object-contain transition-all duration-300"
                     loading="lazy"
                   />
                 </div>
