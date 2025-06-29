@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -15,9 +15,26 @@ const ConsultationFormCard = () => {
   });
   const [showThankYou, setShowThankYou] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isGlowing, setIsGlowing] = useState(false);
   const { toast } = useToast();
 
   const propertyTypes = ['1 BHK', '2 BHK', '3 BHK', '4 BHK', 'Villa', 'Duplex'];
+
+  useEffect(() => {
+    const handleHighlight = () => {
+      setIsGlowing(true);
+      // Remove the glow effect after 3 seconds
+      setTimeout(() => {
+        setIsGlowing(false);
+      }, 3000);
+    };
+
+    window.addEventListener('highlight-consultation-form', handleHighlight);
+
+    return () => {
+      window.removeEventListener('highlight-consultation-form', handleHighlight);
+    };
+  }, []);
 
   const handlePropertyTypeSelect = (type: string) => {
     setSelectedPropertyType(type);
@@ -92,7 +109,25 @@ const ConsultationFormCard = () => {
 
   if (showThankYou) {
     return (
-      <Card className="border-green-200 shadow-lg animate-fade-in w-full max-w-sm md:max-w-md mx-auto" data-consultation-form>
+      <>
+        <style>
+          {`
+            @keyframes glow-pulse {
+              0%, 100% {
+                box-shadow: 0 0 20px rgba(239, 68, 68, 0.5), 0 0 40px rgba(239, 68, 68, 0.3), 0 0 60px rgba(239, 68, 68, 0.1);
+              }
+              50% {
+                box-shadow: 0 0 30px rgba(239, 68, 68, 0.7), 0 0 50px rgba(239, 68, 68, 0.5), 0 0 70px rgba(239, 68, 68, 0.3);
+              }
+            }
+            
+            .glow-effect {
+              animation: glow-pulse 1.5s ease-in-out infinite;
+              transition: all 0.3s ease;
+            }
+          `}
+        </style>
+        <Card className={`border-green-200 shadow-lg animate-fade-in w-full max-w-sm md:max-w-md mx-auto ${isGlowing ? 'glow-effect' : ''}`} data-consultation-form>
         <CardContent className="text-center p-6 md:p-8">
           <div className="w-12 h-12 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg className="w-6 h-6 md:w-8 md:h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -117,11 +152,30 @@ const ConsultationFormCard = () => {
           </Button>
         </CardContent>
       </Card>
+      </>
     );
   }
 
   return (
-    <Card className="shadow-xl border-0 animate-fade-in w-full max-w-sm md:max-w-md mx-auto" data-consultation-form>
+    <>
+      <style>
+        {`
+          @keyframes glow-pulse {
+            0%, 100% {
+              box-shadow: 0 0 20px rgba(239, 68, 68, 0.5), 0 0 40px rgba(239, 68, 68, 0.3), 0 0 60px rgba(239, 68, 68, 0.1);
+            }
+            50% {
+              box-shadow: 0 0 30px rgba(239, 68, 68, 0.7), 0 0 50px rgba(239, 68, 68, 0.5), 0 0 70px rgba(239, 68, 68, 0.3);
+            }
+          }
+          
+          .glow-effect {
+            animation: glow-pulse 1.5s ease-in-out infinite;
+            transition: all 0.3s ease;
+          }
+        `}
+      </style>
+      <Card className={`shadow-xl border-0 animate-fade-in w-full max-w-sm md:max-w-md mx-auto ${isGlowing ? 'glow-effect' : ''}`} data-consultation-form>
       <CardHeader className="text-center bg-gradient-to-r from-red-600 to-red-700 text-white rounded-t-lg p-4 md:p-6">
         <CardTitle className="text-lg md:text-xl font-semibold">
           Get a Free Design Consultation
@@ -224,6 +278,7 @@ const ConsultationFormCard = () => {
         )}
       </CardContent>
     </Card>
+    </>
   );
 };
 
