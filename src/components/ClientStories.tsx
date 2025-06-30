@@ -10,44 +10,44 @@ const ClientStories = () => {
   const stories = [
     {
       id: 1,
-      name: "Kritika & Shikhar",
-      location: "Owner at SJR Bluewaters",
-      testimonial: "We got lucky when we found Creative Designs. The quality that we got after their handover is commendable.",
+      name: "Gyan & Ritu",
+      location: "Home Interior Project",
+      testimonial: "What impressed us most was how accurate the final outcome was to the 3D design. But beyond that, every element in our home is practical for everyday living. The kitchen layout works beautifully, and the storage is spot-on. We didn't just get a good design—we got a home that works for us.",
       image: "/lovable-uploads/testimonialsimages/429A3428 (1).webp"
     },
     {
       id: 2,
-      name: "Priya & Rajesh",
-      location: "Homeowners at Prestige Lakeside",
-      testimonial: "Creative Designs transformed our 3BHK into a dream home. Their attention to detail is exceptional.",
+      name: "Nishant & Family",
+      location: "JCD Client",
+      testimonial: "We've heard horror stories about handovers being delayed by months. But with JCD, the process was surprisingly smooth. We got weekly updates, the timeline was respected, and the final finish was exactly what we saw in the 3D. Even after living here for 6 months, not a single thing has come loose or broken. That says a lot about their quality.",
       image: "/lovable-uploads/testimonialsimages/429A3431.webp"
     },
     {
       id: 3,
-      name: "Anita Sharma",
-      location: "Villa Owner at Whitefield",
-      testimonial: "Professional service, on-time delivery, and beautiful designs. Highly recommend Creative Designs!",
+      name: "Manish & Family",
+      location: "Residential Client",
+      testimonial: "Honestly, I didn't want drama, I just wanted good interiors done on time without me having to micro-manage. That's exactly what I got. The team was chill, responsive, and very clear with communication. I never felt pushed or confused. They made the whole process so easy, I'd happily do this again.",
       image: "/lovable-uploads/testimonialsimages/429A3436.webp"
     },
     {
       id: 4,
-      name: "Vikram & Sunita",
-      location: "Apartment at Brigade Gateway",
-      testimonial: "From modular kitchen to bedroom interiors, everything was perfectly executed by Creative Designs team.",
+      name: "Savita Family",
+      location: "Residential Project",
+      testimonial: "Even after the handover, the team stayed connected and helped us with a couple of small fixes, no chasing, no excuses. That kind of follow-up is rare these days. The wooden detailing in our dining area is a showstopper. Guests always ask who did it!",
       image: "/lovable-uploads/testimonialsimages/reviewer1.eaf0bd71f2cf10471cb7253b0b125df9.webp"
     },
     {
       id: 5,
-      name: "Arjun & Meera",
-      location: "Penthouse at Phoenix Marketcity",
-      testimonial: "Creative Designs gave our penthouse a modern makeover. The team was professional and delivered beyond expectations.",
+      name: "Amrita & Shanshank",
+      location: "Homeowners in Bangalore",
+      testimonial: "I loved that the price we agreed on was the price we paid, no surprises. The craftsmanship in our wardrobe and kitchen was visible everywhere. Plus, having one designer manage everything made life so much easier. We couldn't recommend them more.",
       image: "/lovable-uploads/testimonialsimages/reviewer2.46a5814f1ec1bded67d5d2b1ce5f58bb.webp"
     },
     {
       id: 6,
-      name: "Ravi Kumar",
-      location: "Bungalow at Jayanagar",
-      testimonial: "Outstanding work by Creative Designs! They understood our vision perfectly and executed it flawlessly.",
+      name: "Anand's Family",
+      location: "Bangalore Residence",
+      testimonial: "We had one person to coordinate with from start to finish. No back-and-forth with vendors or explaining things twice. It was incredibly smooth. Plus, the timeline they gave us? They actually delivered on it—which is rare in this space.",
       image: "/lovable-uploads/testimonialsimages/reviewer3.9d801a979586ccd7db7ac745e8ffe596.webp"
     }
   ];
