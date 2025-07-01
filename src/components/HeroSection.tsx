@@ -1,26 +1,28 @@
 
 import React from 'react';
-import BackgroundCarousel from './BackgroundCarousel';
+import HeroImageSlideshow from './HeroImageSlideshow';
 import HeroContent from './HeroContent';
 import ConsultationFormCard from './ConsultationFormCard';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center py-8 md:py-16 lg:py-24 px-4 md:px-6 overflow-hidden">
-      {/* Background Carousel */}
-      <BackgroundCarousel />
-
-      {/* Content */}
-      <div className="relative z-20 max-w-7xl mx-auto w-full flex-1 flex flex-col justify-center">
-        <div className="grid lg:grid-cols-2 gap-3 md:gap-6 lg:gap-12 items-center">
-          {/* Left side - Text content */}
-          <div className="order-1">
-            <HeroContent />
+    <section className="bg-gray-50 pt-6 pb-8">
+      <div className="max-w-7xl mx-auto w-full px-4 md:px-6">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-center">
+          {/* Left side - Image Slideshow */}
+          <div className="order-2 lg:order-1">
+            <HeroImageSlideshow />
           </div>
 
-          {/* Right side - Form */}
-          <div className="order-2 flex justify-center lg:justify-end">
-            <ConsultationFormCard />
+          {/* Right side - Content and Form */}
+          <div className="order-1 lg:order-2 flex flex-col justify-center space-y-4 lg:space-y-6">
+            {/* Hero Content */}
+            <HeroContent />
+            
+            {/* Consultation Form */}
+            <div className="flex justify-center">
+              <ConsultationFormCard />
+            </div>
           </div>
         </div>
       </div>

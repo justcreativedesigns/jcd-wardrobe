@@ -3,28 +3,28 @@ import React from 'react';
 
 const HeroContent = () => {
   return (
-    <div className="text-center lg:text-left">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-3 md:mb-6 leading-tight animate-fade-in" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
+    <div className="text-center mb-4 lg:mb-0">
+      <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-2 md:mb-3 leading-tight animate-fade-in">
         Best Interior Designers
         <br />
-        <span className="text-red-500">In Bangalore</span>
+        <span className="text-red-600">In Bangalore</span>
       </h1>
       
-      <p className="text-lg sm:text-xl lg:text-2xl text-gray-200 font-medium mb-4 md:mb-8 animate-fade-in" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>
+      <p className="text-base sm:text-lg lg:text-xl text-gray-700 font-medium mb-3 md:mb-4 animate-fade-in">
         Affordable – Quick – Premium
       </p>
       
-      <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center lg:justify-start items-center animate-fade-in text-sm sm:text-base">
-        <div className="flex items-center space-x-2 text-gray-300" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.6)' }}>
-          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full"></div>
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center animate-fade-in text-xs sm:text-sm">
+        <div className="flex items-center space-x-1.5 text-gray-600">
+          <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
           <span>10+ Years Experience</span>
         </div>
-        <div className="flex items-center space-x-2 text-gray-300" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.6)' }}>
-          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full"></div>
+        <div className="flex items-center space-x-1.5 text-gray-600">
+          <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
           <span>1000+ Happy Clients</span>
         </div>
-        <div className="flex items-center space-x-2 text-gray-300" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.6)' }}>
-          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full"></div>
+        <div className="flex items-center space-x-1.5 text-gray-600">
+          <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
           <span>Award Winning Designs</span>
         </div>
       </div>
