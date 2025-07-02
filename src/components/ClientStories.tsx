@@ -47,7 +47,7 @@ const ClientStories = () => {
       id: 6,
       name: "Anand's Family",
       location: "Luxury Wardrobe Project",
-      testimonial: "Our luxury wardrobe with automated lighting and soft-close mechanisms was delivered exactly as promised! Single point of contact made the process seamless. The attention to detail - from the velvet-lined jewelry drawers to the tie racks - shows true craftsmanship. Delivered on time, which is exceptional!"
+      testimonial: "Our luxury wardrobe with automated lighting and soft-close mechanisms was delivered exactly as promised! Single point of contact made the process seamless. The attention to detail - from the velvet-lined jewelry drawers to the tie racks - shows true craftsmanship. Delivered on time, which is exceptional!",
       image: "/lovable-uploads/testimonialsimages/reviewer3.9d801a979586ccd7db7ac745e8ffe596.webp"
     }
   ];
