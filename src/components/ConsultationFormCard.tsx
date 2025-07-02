@@ -180,7 +180,7 @@ const ConsultationFormCard = () => {
       <Card className={`shadow-xl border-0 animate-fade-in w-full max-w-sm md:max-w-md mx-auto ${isGlowing ? 'glow-effect' : ''}`} data-consultation-form>
       <CardHeader className="text-center bg-gradient-to-r from-red-600 to-red-700 text-white rounded-t-lg p-4 md:p-6">
         <CardTitle className="text-lg md:text-xl font-semibold">
-          Get a Free Design Consultation
+          Get a Free Wardrobe Design Consultation
         </CardTitle>
         <p className="text-red-100 text-xs md:text-sm font-medium mt-2 animate-pulse">
           ⚡ Last 3 spots left this month!

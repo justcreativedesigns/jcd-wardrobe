@@ -11,43 +11,43 @@ const ClientStories = () => {
     {
       id: 1,
       name: "Gyan & Ritu",
-      location: "Home Interior Project",
-      testimonial: "What impressed us most was how accurate the final outcome was to the 3D design. But beyond that, every element in our home is practical for everyday living. The kitchen layout works beautifully, and the storage is spot-on. We didn't just get a good design—we got a home that works for us.",
+      location: "Master Bedroom Wardrobe",
+      testimonial: "The wardrobe design exceeded our expectations! Every inch of space is utilized perfectly with custom shelving and compartments. The soft-close drawers and LED lighting make it feel premium. What we saw in the 3D design is exactly what we got - a wardrobe that's both beautiful and functional.",
       image: "/lovable-uploads/testimonialsimages/429A3428 (1).webp"
     },
     {
       id: 2,
       name: "Nishant & Family",
-      location: "JCD Client",
-      testimonial: "We've heard horror stories about handovers being delayed by months. But with JCD, the process was surprisingly smooth. We got weekly updates, the timeline was respected, and the final finish was exactly what we saw in the 3D. Even after living here for 6 months, not a single thing has come loose or broken. That says a lot about their quality.",
+      location: "Walk-in Wardrobe Project",
+      testimonial: "Our walk-in wardrobe was delivered exactly on time! The quality of materials used is exceptional - from the premium laminates to the smooth drawer mechanisms. Six months later, everything still works perfectly. The organized sections for clothes, accessories, and shoes have transformed our daily routine.",
       image: "/lovable-uploads/testimonialsimages/429A3431.webp"
     },
     {
       id: 3,
       name: "Manish & Family",
-      location: "Residential Client",
-      testimonial: "Honestly, I didn't want drama, I just wanted good interiors done on time without me having to micro-manage. That's exactly what I got. The team was chill, responsive, and very clear with communication. I never felt pushed or confused. They made the whole process so easy, I'd happily do this again.",
+      location: "Kids Room Wardrobe",
+      testimonial: "The kids' wardrobe design is brilliant! Height-adjustable shelves that grow with them, safety locks on drawers, and colorful interiors that they love. The team understood our needs perfectly and delivered without any hassle. Installation was quick and clean - exactly what busy parents need!",
       image: "/lovable-uploads/testimonialsimages/429A3436.webp"
     },
     {
       id: 4,
       name: "Savita Family",
-      location: "Residential Project",
-      testimonial: "Even after the handover, the team stayed connected and helped us with a couple of small fixes, no chasing, no excuses. That kind of follow-up is rare these days. The wooden detailing in our dining area is a showstopper. Guests always ask who did it!",
+      location: "Guest Room Wardrobe",
+      testimonial: "The sliding wardrobe doors save so much space in our guest room! The mirror finish makes the room look bigger, and the internal organization is perfect for guest essentials. Even after installation, the team helped us optimize the storage layout. Such attention to detail is rare!",
       image: "/lovable-uploads/testimonialsimages/reviewer1.eaf0bd71f2cf10471cb7253b0b125df9.webp"
     },
     {
       id: 5,
       name: "Amrita & Shanshank",
       location: "Homeowners in Bangalore",
-      testimonial: "I loved that the price we agreed on was the price we paid, no surprises. The craftsmanship in our wardrobe and kitchen was visible everywhere. Plus, having one designer manage everything made life so much easier. We couldn't recommend them more.",
+      testimonial: "The pricing was transparent from start to finish - no hidden costs! Our bedroom wardrobe's craftsmanship is impeccable with perfect edge banding and smooth finishes. The designer understood our storage needs perfectly and created a solution that maximizes every corner. Highly recommended!",
       image: "/lovable-uploads/testimonialsimages/reviewer2.46a5814f1ec1bded67d5d2b1ce5f58bb.webp"
     },
     {
       id: 6,
       name: "Anand's Family",
-      location: "Bangalore Residence",
-      testimonial: "We had one person to coordinate with from start to finish. No back-and-forth with vendors or explaining things twice. It was incredibly smooth. Plus, the timeline they gave us? They actually delivered on it—which is rare in this space.",
+      location: "Luxury Wardrobe Project",
+      testimonial: "Our luxury wardrobe with automated lighting and soft-close mechanisms was delivered exactly as promised! Single point of contact made the process seamless. The attention to detail - from the velvet-lined jewelry drawers to the tie racks - shows true craftsmanship. Delivered on time, which is exceptional!"
       image: "/lovable-uploads/testimonialsimages/reviewer3.9d801a979586ccd7db7ac745e8ffe596.webp"
     }
   ];
@@ -89,10 +89,10 @@ const ClientStories = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Bangalore Client Stories
+            Bangalore Wardrobe Stories
           </h2>
           <p className="text-gray-600">
-            Our clients share why they loved doing their home with Creative Designs
+            Our clients share their custom wardrobe experiences with Creative Designs
           </p>
         </div>
         

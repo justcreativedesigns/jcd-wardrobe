@@ -13,9 +13,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4 text-gray-900">Shop By</h4>
             <ul className="space-y-2 text-gray-600">
-              <li><a href="#" className="hover:text-gray-900 transition-colors">Wardrobe</a></li>
-              <li><a href="#" className="hover:text-gray-900 transition-colors">Kitchen</a></li>
-              <li><a href="#" className="hover:text-gray-900 transition-colors">Kids</a></li>
+              <li><a href="#" className="hover:text-gray-900 transition-colors">Walk-in Wardrobes</a></li>
+              <li><a href="#" className="hover:text-gray-900 transition-colors">Sliding Wardrobes</a></li>
+              <li><a href="#" className="hover:text-gray-900 transition-colors">Hinged Wardrobes</a></li>
+              <li><a href="#" className="hover:text-gray-900 transition-colors">Kids Wardrobes</a></li>
             </ul>
           </div>
           
