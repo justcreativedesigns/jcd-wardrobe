@@ -16,7 +16,7 @@ const App = () => (
       <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="/thank-you-wardrobe" element={<ThankYou />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

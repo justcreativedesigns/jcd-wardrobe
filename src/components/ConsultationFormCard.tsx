@@ -90,7 +90,7 @@ const ConsultationFormCard = () => {
         });
         
         // Redirect to thank you page
-        navigate('/thank-you');
+        navigate('/thank-you-wardrobe');
       } else {
         throw new Error('Form submission failed');
       }
